@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本指令</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>v-cloak</h4>
+    <p>解决初始化慢导致页面闪动,需要配合display: none使用</p>
+    <div v-cloak>{{msg}}</div>
+    <h4>v-once</h4>
+    <p>只渲染一次，后续都不会重新渲染</p>
+    <div v-once>{{onceMsg}}</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            msg:"你好",
+            onceMsg:"只加载一次"
+        },
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4></h4>
+    <my-component msg="0"></my-component>
+    <!--通过input 改变div的宽度-->
+    <input type="text" v-model="width">
+    <width-component :width="width"></width-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    // 场景一:把从父组件传递过来的值保存起来
+    Vue.component("my-component",{
+        props:["msg"],
+        template:`
+            <div>我是一个组件--{{count}}</div>
+        `,
+        data(){
+            // props 中的值可以通过this.xxx来获取
+            return {
+                count:this.msg
+            }
+        }
+    })
+    //将传递进来的值通过计算属性重新计算
+    Vue.component("width-component",{
+        props:["width"],
+        template:`
+            <div :style="style">我是宽度组件</div>
+        `,
+        data(){
+            // props 中的值可以通过this.xxx来获取
+            return {
+            }
+        },
+        computed:{
+            style(){
+                return {
+                    width:this.width+"px",
+                    height:"30px",
+                    border:"1px solid red"
+                }
+            }
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            width:100
+        },
+
+    })
+</script>
+</body>
+</html>

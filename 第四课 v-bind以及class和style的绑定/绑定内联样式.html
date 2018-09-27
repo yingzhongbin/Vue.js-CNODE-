@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定内联样式</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>键代表style的属性，值代表属性对应的值</h4>
+    <div :style="{'fontSize':fontSize,'color':color}">fontSize绑定内联样式</div>
+    <div :style="{'font-size':fontSize,'color':color}">font-size绑定内联样式</div>
+    <h5>切记，vue中只要是大写字母，都会转换成-小写</h5>
+    <p>fontSize -- font-size</p>
+    <h4>style数组语法（基本不用）</h4>
+    <div :style="[styleA,styleB]">数组语法</div>
+    <p>
+        v-bind是用来给属性绑定活的值。
+        用法：v-bind:属性="属性值"，语法糖 :属性="属性值"
+        变量语法：v-bind:class="变量"，这里的变量通常是定义好的类名
+        数组语法：v-bind:class="[变量1，变量2]" 这里的变量同上
+        对象语法：v-bind:class="{类名1：变量1,类名2：变量2}",其中类名为定义好的类名，
+        变量可以是定义好的变量、常量、计算属性。
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            color:"red",
+            fontSize:"26px",
+            styleA:{
+                border:"5px solid red"
+            },
+            styleB:{
+                fontSize:"32px"
+            }
+        },
+        methods:{
+            changebgColor(){
+                this.isBg  = !this.isBg
+            }
+        },
+        computed:{
+            classNames(){
+                return {
+                    active:this.isActive && this.isBorder
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

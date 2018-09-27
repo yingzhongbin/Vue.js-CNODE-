@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <my-component value="haha"></my-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("my-component",{
+        functional:true,//表示当前的vue实例无状态，无实例，也就是没有this，通过context来实现
+        render(createElement,context){
+            return createElement("button",{
+                on:{
+                    click(){
+                        console.log(context);
+                        console.log(context.slots);
+                        console.log(context.props);
+                        console.log(context.props.value);
+                        console.log(context.parent);
+                    }
+                }
+            },
+            "点我")
+        },
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+        },
+
+    })
+</script>
+</body>
+</html>

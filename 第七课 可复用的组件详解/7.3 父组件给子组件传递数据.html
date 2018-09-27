@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>我是父组件</h4>
+    <child-component msg="[3,6,9]"></child-component>
+    <child-component :msg="[3,6,9]"></child-component>
+    <input type="text" v-model="bindMsg">
+    <bind-component :bind-msg="bindMsg"></bind-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            bindMsg:"你好"
+        },
+        components:{
+            "child-component":{
+                props:["msg"],
+                template:`<div>{{msg.length}}</div>`
+            },
+            "bind-component":{
+                props:["bind-msg"],
+                template:`<div>{{bindMsg}}</div>`
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4></h4>
+    <p>您的银行卡余额为：{{total}}</p>
+    <child-component @change="handleCount"></child-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("child-component",{
+        template:`
+            <div>
+               <button @click="plus">+</button>
+               <button @click="minus">-</button>
+            </div>
+        `,
+        data(){
+            return {
+                total:2000
+            }
+        },
+        methods:{
+            plus(){
+                this.total+=1000
+                this.$emit("change",this.total)
+            },
+            minus(){
+                this.total-=1000
+                this.$emit("change",this.total)
+            }
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            total:2000
+        },
+        methods:{
+            handleCount(value){
+               this.total = value
+            }
+        }
+
+    })
+
+</script>
+</body>
+</html>

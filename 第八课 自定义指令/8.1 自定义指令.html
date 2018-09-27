@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-focus>
+    <hr>
+    <div v-cuihua:goudan.a.b.c="obq"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.directive('focus',{
+        inserted(el){
+            el.focus()
+        }
+    });
+    Vue.directive("cuihua",{
+        bind(el,binding,vnode){
+            var keys = []
+            for(key in vnode){
+                keys.push(key)
+            }
+            el.innerHTML =
+                "name:" + binding.name +"<br>" +
+                "value:" + binding.value +"<br>" +
+                "expression:" + binding.expression +"<br>" +
+                "argument:" + binding.arg +"<br>" +
+                "modifiers:" + JSON.stringify(binding.modifiers) +"<br>"+
+                "vnode中的keys:" + keys.join(",") +"<br>"
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            obq:"我是cuihua指令里的值"
+        },
+
+    })
+
+</script>
+</body>
+</html>

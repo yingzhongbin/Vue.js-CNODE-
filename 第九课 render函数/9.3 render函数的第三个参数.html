@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <my-component></my-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("my-component",{
+        render(createElement){
+            //createElement 第三个参数 可选 为String|Array 作为构建函数的子节点来使用
+            return createElement({
+                template:`
+                     <div>锄禾日当午</div>
+                 `
+            },{
+                class:{
+                    foo:true,
+                    buz:false
+                },
+                style:{
+                    color:"red",
+                    fontSize:"30px"
+                },
+                // 正常的html属性
+                attrs:{
+                    id:'fuck'
+                },
+                domProps:{
+                    innerHTML:"<span style='color:red;font-size:20px'>我是蓝色的</span>"
+                }
+            })
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+
+        },
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>变量语法</h4>
+    <component :is="comp">
+    </component>
+    <button @click="handleComp('a')">第一句</button>
+    <button @click="handleComp('b')">第二句</button>
+    <button @click="handleComp('c')">第三句</button>
+    <button @click="handleComp('d')">第四句</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    // 需求，通过点击不同的按钮切换不同的视图
+    Vue.component("a-component",{
+        template:`
+            <div>
+                离离原上草
+            </div>
+        `,
+    })
+    Vue.component("b-component",{
+        template:`
+            <div>
+                一岁一枯荣
+            </div>
+        `,
+    })
+    Vue.component("c-component",{
+        template:`
+            <div>
+               野火烧不尽
+            </div>
+        `,
+    })
+    Vue.component("d-component",{
+        template:`
+            <div>
+                春风吹又生
+            </div>
+        `,
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            comp:"a-component"
+        },
+        methods:{
+            handleComp(tag){
+                this.comp = tag + "-component"
+            }
+        }
+    })
+</script>
+</body>
+</html>

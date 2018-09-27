@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h5>单个slot</h5>
+    <my-component>
+        我是父组件内容
+    </my-component>
+    <h5>具名slot</h5>
+    <name-component>
+        <h4 slot="header">我是标题</h4>
+        <p>我是第一段</p>
+        <p>我是第二段</p>
+        <h6 slot="footer">我是结尾</h6>
+    </name-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("my-component",{
+        template:`
+            <div>
+                <slot>
+                    如果父组件没有内容，我就是内容
+                </slot>
+            </div>
+        `,
+        data(){
+            return {
+            }
+        },
+        methods:{
+        }
+    })
+    Vue.component("name-component",{
+        template:`
+            <div>
+                <div class="header">
+                    <slot name="header">
+                    </slot>
+                </div>
+                <div class="container">
+                    <slot>
+                    </slot>
+                </div>
+                <div class="footer">
+                    <slot name="footer">
+                    </slot>
+                </div>
+            </div>
+        `
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+        },
+
+    })
+</script>
+</body>
+</html>

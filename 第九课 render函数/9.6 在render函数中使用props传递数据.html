@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="changeShow">点我切换图片</button>
+    <my-component :show="show"></my-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("my-component",{
+        props:["show"],
+        render(createElement){
+            let imgSrc
+            if(this.show){
+                imgSrc = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3216139066,4207657487&fm=27&gp=0.jpg"
+            }else{
+                imgSrc = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2740756761,2668961157&fm=27&gp=0.jpg"
+            }
+            return createElement("img",{
+                attrs:{
+                    src:imgSrc,
+                    height:"300px"
+                }
+            })
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            show:true
+        },
+        methods:{
+            changeShow(){
+                this.show = !this.show
+            }
+        }
+    })
+</script>
+</body>
+</html>

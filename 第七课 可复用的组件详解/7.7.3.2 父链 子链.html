@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <a-component ref="a"></a-component>
+    <b-component ref="b"></b-component>
+    <p>
+        <button @click="getAMsg">点我拿到A的数据</button>
+        拿到A组件的数据aMsg{{aMsg}}
+    </p>
+    <p>
+        <button @click="getBMsg">点我拿B到的数据</button>
+        拿到B组件的数据aMsg{{bMsg}}
+    </p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("a-component",{
+        template:`
+            <div>
+                   msg--{{msg}}
+            </div>
+        `,
+        data(){
+            return {
+                msg:"AAA"
+            }
+        },
+        methods:{
+
+        }
+    })
+    Vue.component("b-component",{
+        template:`
+            <div>
+            faData--{{faData}}
+            <button @click="changeFaData">点我</button>
+                {{msg}}
+            </div>
+        `,
+        data(){
+            return {
+                faData:"",
+                msg:'BBBBBB'
+            }
+        },
+        methods:{
+            changeFaData(){
+                this.faData = this.$root.faMsg
+            }
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            // bus中介
+            faMsg:"我是父组件的信息",
+            bus:new Vue(),
+            aMsg:"",
+            bMsg:""
+        },
+        methods:{
+            getAMsg(){
+                this.aMsg = this.$refs.a.msg
+            },
+            getBMsg(){
+                this.bMsg = this.$refs.b.msg
+            },
+        }
+    })
+</script>
+</body>
+</html>

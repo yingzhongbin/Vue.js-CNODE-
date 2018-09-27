@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <child :level="level">我是蜡笔小新</child>
+</div>
+// template下只允许有一个子节点
+<!--<template id="hdom">-->
+    <!--<div>-->
+        <!--<h1 v-if="level===1">-->
+            <!--<slot></slot>-->
+        <!--</h1>-->
+        <!--<h2 v-if="level===2">-->
+            <!--<slot></slot>-->
+        <!--</h2>-->
+        <!--<h3 v-if="level===3">-->
+            <!--<slot></slot>-->
+        <!--</h3>-->
+    <!--</div>-->
+<!--</template>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    // 使用vue组件定义
+    // Vue.component("child",{
+    //     props:["level"],
+    //     template: `#hdom`
+    // })
+    // 使用render函数进行定义组件
+    Vue.component("child",{
+        render(createElement){
+            return createElement("h"+this.level,this.$slots.default)
+        },
+        props:['level']
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            level:2
+        },
+
+    })
+</script>
+</body>
+</html>

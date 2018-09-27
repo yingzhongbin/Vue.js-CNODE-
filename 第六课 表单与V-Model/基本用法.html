@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>v-model的用法:</h4>
+    <h5>input、textarea 用法</h5>
+    <input type="text" v-model="value"><br>
+    {{value}}<br>
+    <textarea name="" id="" cols="30" rows="10" v-model="msg"></textarea><br>
+    {{msg}}
+    <h5>单选框</h5>
+    <p>一个单选框：v-bind<input type="radio" v-bind:checked="oneRadio"></p>
+    <p>一个单选框：v-model不行<input type="radio" v-model:checked="oneRadio"></p>
+    <p>多个单选框：<br>
+        翠花:<input type="radio" name="checks" value="翠花" v-model="checks">
+        毛蛋:<input type="radio" name="checks" value="毛蛋" v-model="checks">
+        狗蛋:<input type="radio" name="checks" value="狗蛋" v-model="checks">
+    </p>
+    <p>你选中了:{{checks}}</p>
+    <h5>复选框</h5>
+    <p>一个复选框：用v-bind<input type="checkbox" v-bind:checked="oneRadio">{{oneRadio}}</p>
+    <p>一个复选框：用v-model<input type="checkbox" v-model:checked="oneRadio">{{oneRadio}}</p>
+    <p>多个复选框：data只能设定为数组<br>
+        翠花:<input type="checkbox" value="翠花" v-model="checkboxs">
+        毛蛋:<input type="checkbox" value="毛蛋" v-model="checkboxs">
+        狗蛋:<input type="checkbox" value="狗蛋" v-model="checkboxs"><br>
+        {{checkboxs}}
+    <hr>
+    <h5>下拉框</h5>
+    <p>单选下拉框:</p>
+    <select name="" id="selectOne" v-model="selectOne">
+        <option value="翠花">翠花</option>
+        <option value="毛蛋">毛蛋</option>
+        <option value="狗蛋">狗蛋</option>
+    </select>
+    <p>选择了：{{selectOne}}</p>
+    <p>多选下拉框:</p>
+    <select name="" id="selectMul" multiple v-model="selectMul">
+        <option value="翠花">翠花</option>
+        <option value="毛蛋">毛蛋</option>
+        <option value="狗蛋">狗蛋</option>
+    </select>
+    <p>选择了：{{selectMul}}</p>
+    <hr>
+    <h5>绑定值</h5>
+    <p>一个单选框：v-bind<input type="radio" v-bind:value="value2" v-model="checked"></p>
+    <p>==={{value2}}==={{checked}}</p>
+    <p>复选框：</p>
+    <input type="checkbox" name="" id="" v-model="toggle" :true-value="value2" :false-value="value3">
+    ---{{toggle}}---{{value2}}---{{value3}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            value:'',
+            msg:'',
+            oneRadio:true,
+            checks:"",
+            checkboxs:[],
+            selectOne:'翠花',
+            selectMul:[],
+            value2:"wqeq",
+            checked:true,
+            toggle:true,
+            value2:"选中了",
+            value3:"没被选中",
+
+        },
+
+    })
+</script>
+</body>
+</html>

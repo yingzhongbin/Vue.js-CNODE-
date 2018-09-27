@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示姓名</title>
+
+</head>
+<body>
+
+<div id="app">
+    我的姓名是：{{fullName}}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+
+    let app = new Vue({
+        el:"#app",
+        data:{
+            firstName:"Zhang",
+            lastName:"sanfeng"
+        },
+        computed:{
+            //计算属性默认方法使getter函数
+            fullName:{
+                get(){
+                    return this.firstName + ' '+ this.lastName
+                },
+                set(newValue){
+                    // app.fullName = "guan yu"
+                    let arr = newValue.split(" ")
+                    this.firstName = arr[0]
+                    this.lastName = arr[1]
+                }
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

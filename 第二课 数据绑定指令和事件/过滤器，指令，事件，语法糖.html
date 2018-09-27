@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器，指令，事件，语法糖</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>过滤器</h2>
+        <!--过滤器，| 后面接的是过滤器的名字-->
+        {{date | formatDate}}
+        <!--设置多个过滤器-->
+        <!--{{data | filter1 | filter2}}-->
+        <br>
+        <!--设置过滤器参数-->
+        {{date | formatDate("arg1","arg2")}}
+        <hr>
+        <h2>指令和事件</h2>
+        <h4>v-text</h4>
+        {{apple}}
+        <div v-text="apple"></div>
+        <h4>v-html</h4>
+        <div v-text="banana"></div>
+        <div v-html="banana"></div>
+        <h4>v-bind指令：绑定活的属性</h4>
+        <div :class="red">red</div>
+        <h4>v-on：绑定事件监听器</h4>
+        <button @click="addCount">{{countNum}}</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        // 需求，在页面实时显示时间
+        function plusDate(value){
+            return value<10?"0"+value : value
+        }
+        let app = new Vue({
+            el:"#app",
+            data:{
+                date:new Date(),
+                apple:'苹果',
+                banana:"<span style='color:yellow'>香蕉</span>",
+                red:"red",
+                countNum:0
+            },
+            methods:{
+                addCount(){
+                    this.countNum++
+                }
+            },
+            // 过滤器
+            filters:{
+                formatDate(value,arg1,arg2){
+                    // 这里的value就是需要过滤的数据
+                    let date = new Date(value)
+                    let year = date.getFullYear();
+                    let month = plusDate(date.getMonth())
+                    let day = plusDate(date.getDay())
+                    let hour = plusDate(date.getHours())
+                    let minute = plusDate(date.getMinutes())
+                    let second = plusDate(date.getSeconds())
+                    return year+"/"+month+"/"+ day+"  "+hour+":"+minute+":"+second
+                }
+            },
+            mounted(){
+                this.timer = setInterval(()=>{
+                    this.date = new Date()
+                },1000)
+            },
+            beforeDestroy(){
+                // 如果定时器存在，销毁定时器
+                if(this.timer){
+                    clearInterval(this.timer)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

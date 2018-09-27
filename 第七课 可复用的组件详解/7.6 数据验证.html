@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>变量语法</h4>
+    <h5>在组件命名中，只能使用-，不能使用大写，因为HTML标签不区分大小写</h5>
+    <h5>在组件定义中，只能使用驼峰命名</h5>
+    <hr>
+    <type-component :a="a" :b="b" :d="d" :e="e" :f="f" :g="g"></type-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("type-component",{
+        // 数据类型校验
+        props:{
+            a:Number,
+            b:[String,Number],
+            // 必须是布尔型 默认为true，type-required-default
+            c:{
+                type:Boolean,
+                default:true
+            },
+            d:{
+                type:Number,
+                required:true
+            },
+            e:{
+                type:Array,
+                default(){
+                    return [555]
+                }
+            },
+            //自定义验证函数
+            f:{
+                validator(value){
+                    return value>10
+                }
+            },
+            g:{
+                type:Function
+            }
+        },
+        template:`
+            <div>{{a}}--{{b}}--{{c}}--{{d}}--{{e}}--{{f}}--{{g}}</div>
+        `,
+        data(){
+            return {
+            }
+        },
+        computed:{
+
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            a:0,
+            b:"bbbb",
+            d:2234,
+            e:[222],
+            f:88,
+            g:console.log()
+        },
+
+    })
+
+</script>
+</body>
+</html>

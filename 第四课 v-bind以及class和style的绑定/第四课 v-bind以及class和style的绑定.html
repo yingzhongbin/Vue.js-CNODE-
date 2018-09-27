@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <h2>v-bind:绑定活的属性</h2>
+    <div id="app">
+        <a :href="url">baidu</a><br>
+        <img :src="imgUrl" alt=""><br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                url:"https://www.baidu.com",
+                imgUrl:"https://www.baidu.com/img/baidu_jgylogo3.gif"
+            },
+
+        })
+    </script>
+</body>
+</html>

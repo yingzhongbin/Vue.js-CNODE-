@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定和指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--文本插值方法-->
+        {{msg}}<br>
+        {{6+6}}==== 可以进行简单的运算<br>
+        {{6>3?msg:a}}====可以使用三元运算符<br>
+        <!--{{if(6>3){} }}====不能书写表达式，支持单个表达式-->
+        <!--{{ var a=2 }}======也是多行表达式-->
+    </div>
+
+
+
+    <!--数据绑定-->
+    <script>
+        let app = new Vue({
+            el:"#app",
+            data:{
+                msg:"vue学习开始了",
+                a:1
+            },
+            created(){
+                // alert("我是vue实例，还未挂载到DOM")
+            },
+            mounted(){
+                // alert("我是vue实例，已经挂载到DOM")
+            }
+        })
+        console.log(app.$el);
+        console.log(app.$data);
+        console.log(app.msg);
+        console.log(app.a);
+    </script>
+</body>
+</html>

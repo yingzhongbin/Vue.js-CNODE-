@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <my-component></my-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("my-component",{
+        render(createElement){
+            //createElement 第一个参数 必选   设置标签
+            // String html标签
+            // return createElement("div")
+            // Object 一个含有数据选项的对象
+            // return createElement({
+            //     template:`
+            //         <div>锄禾日当午</div>
+            //     `
+            // })
+            // function 方法返回含有数据选项的对象
+            var domF = function () {
+                return {
+                    template:`
+                       <div>锄禾日当午</div>
+                   `
+                }
+            }
+            return createElement(domF())
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+
+        },
+
+    })
+</script>
+</body>
+</html>

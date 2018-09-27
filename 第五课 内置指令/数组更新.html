@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>改变数组的方法</h4>
+    <ul>
+        <li>push()</li>
+        <li>pop()</li>
+        <li>shift()</li>
+        <li>unshift()</li>
+        <li>splice()增删</li>
+        <li>sort()</li>
+    </ul>
+    <ul>
+        <li v-for="a in arr">{{a}}</li>
+    </ul>
+    <button @click="arrSort">点我排序</button>
+    <button @click="reverse">点我翻转</button>
+    <button @click="changeOne">改变数组的指定项</button>
+    <button @click="changeArrLength">改变数组的长度</button>
+    <h4>两个数组变动vue检测不到</h4>
+    <p>改变数组的指定项</p>
+    <p>改变数组的长度</p>
+    <h4>过滤</h4>
+    <p>过滤数组中含en的项</p>
+    <div>{{matchEN}}</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            arr:["fuckyou",'pen','pencil','eraser']
+        },
+        computed:{
+            matchEN(){
+                return this.arr.filter(function (item) {
+                    return item.match(/en/)
+                })
+            }
+        },
+        methods:{
+            arrSort(){
+                this.arr.sort(function(a,b){
+                    return a.length-b.length
+                })
+            },
+            reverse(){
+                this.arr.reverse()
+            },
+            //改变数组的指定项
+            changeOne(){
+                this.arr[0] = "car"
+            },
+            changeArrLength(){
+                this.arr.length = 2
+            }
+        }
+    })
+    // 改变数组的第一项
+    // Vue.set(app.arr,1,'car')
+    //改变数组的长度
+    // app.arr.splice(3)
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      #container{
+          width: 200px;
+          height: 200px;
+          background-color: red;
+      }
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>.stop阻止事件冒泡</h4>
+   <div @click="divClick" id="container">
+       <button @click.stop="btnClick">按钮</button>
+   </div>
+    <h4>.prevent阻止表单提交,不会重载和刷新了</h4>
+    <form action="" @submit.prevent="submit">
+        <button type="submit">提交</button>
+    </form>
+    <h4>.self不响应子元素的冒泡</h4>
+    <div @click.self="divClick" id="container">
+        <button @click="btnClick">按钮</button>
+    </div>
+    <h4>.self不响应子元素的冒泡</h4>
+    <button @click="recall">响应无数次</button>
+    <button @click.once="recall">响应一次</button>
+    <h4>监听键盘事件</h4>
+    指定的keyCode13:Enter<input type="text" @keyup.13="submitMe">
+    <h6>还有：</h6>
+    <ul>
+        <li>.enter</li>
+        <li>.tab</li>
+        <li>.delete</li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods:{
+            divClick(){
+                console.log("divClick");
+            },
+            btnClick(){
+                console.log("btnClick");
+            },
+            submit(){
+                console.log("submit");
+            },
+            recall(){
+                console.log("recall");
+            },
+            Enter(){
+                console.log("按了Enter键");
+            }
+        }
+    })
+</script>
+</body>
+</html>

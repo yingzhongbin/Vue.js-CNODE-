@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4>v-for的用法</h4>
+    <h5>（1）遍历多个对象,一定是遍历数组</h5>
+    <p>学好vue的方法是：</p>
+    <ul>
+        <li v-for="method in vueMethods">{{method.name}}</li>
+    </ul>
+    <h6>带索引的写法是：</h6>
+    <ul>
+        <li v-for="(method,index) in vueMethods">{{index}}:{{method.name}}</li>
+    </ul>
+    <h5>（1）遍历一个对象的多个属性</h5>
+    <ul>
+        <li v-for="value in fruits">{{value}}</li>
+    </ul>
+    <h6>value key item 的写法  v-k-i</h6>
+    <ul>
+        <li v-for="(value,key,item) in fruits">
+            值：{{value}}  键值：{{key}}  第几个：{{item}}
+        </li>
+    </ul>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            vueMethods:[
+                {name:"多思考"},
+                {name:"多学习"},
+                {name:"多练习"}
+            ],
+            fruits:{
+                name1:"apple",
+                name2:"banana",
+                name3:"pineapple"
+            }
+        },
+
+    })
+</script>
+</body>
+</html>

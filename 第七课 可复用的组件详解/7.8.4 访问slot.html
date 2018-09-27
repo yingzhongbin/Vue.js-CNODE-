@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <name-component>
+        <h4 slot="header"><span>我是标题</span></h4>
+        <p>我是第一段</p>
+        <p>我是第二段</p>
+        <h6 slot="footer">我是结尾</h6>
+    </name-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("name-component",{
+        template:`
+            <div>
+                <div class="header">
+                    <slot name="header">
+                    </slot>
+                </div>
+                <div class="container">
+                    <slot>
+                    </slot>
+                </div>
+                <div class="footer">
+                    <slot name="footer">
+                    </slot>
+                </div>
+            </div>
+        `,
+        mounted(){
+            let header = this.$slots.header;
+            let html = header[0].elm.innerHTML
+            let text = header[0].elm.innerText
+            console.log(header);
+            console.log(html);
+            console.log(text);
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+        },
+
+    })
+</script>
+</body>
+</html>

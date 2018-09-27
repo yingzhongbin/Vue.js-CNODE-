@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <my-component>
+        <p>锄禾日当午</p>
+        <p>汗滴禾下土</p>
+        <h3 slot="header">我是标题</h3>
+        <h5 slot="footer">我是结尾</h5>
+    </my-component>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    // 第三个 参数存的就是vnode createElement 返回的就是vnode
+    Vue.component("my-component",{
+        render(createElement){
+            let main = this.$slots.default
+            let header = this.$slots.header
+            let footer = this.$slots.footer
+            return createElement("div",[
+                createElement("header",header),
+                createElement("main",main),
+                createElement("footer",footer)
+            ])
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+
+        },
+
+    })
+</script>
+</body>
+</html>

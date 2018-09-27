@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      
+    </style>
+</head>
+<body>
+<div id="app">
+    <h4></h4>
+    <p>您的银行卡余额为：{{total}}</p>
+    <child-component v-model="total"></child-component>
+    v-model绑定了input事件 当触发input事件，input事件会自动接收传递过来的参数
+    并赋值给绑定的total
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script>
+    Vue.component("child-component",{
+        template:`
+            <div>
+               <button @click="plus">+</button>
+            </div>
+        `,
+        data(){
+            return {
+                total:2000
+            }
+        },
+        methods:{
+            plus(){
+                this.total+=1000
+                this.$emit("input",this.total)
+            }
+        }
+    })
+    let app = new Vue({
+        el:"#app",
+        data:{
+            total:2000
+        },
+        methods:{
+        }
+
+    })
+
+</script>
+</body>
+</html>

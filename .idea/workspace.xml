@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39bf8ffd-af81-499c-ac17-7b0cc09b87cf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/src/components/father.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/src/components/outter.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/src/components/son.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/state/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vueCli-test/Axios中的get请求/axios-get的副本" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNODE社区网站实战/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/package.json" afterDir="false" />
@@ -26,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="father.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="father.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/father.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+            <state relative-caret-position="416">
+              <caret line="50" column="3" selection-start-line="48" selection-start-column="2" selection-end-line="50" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -38,8 +55,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/state/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="262">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -47,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="son.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="son.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/son.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="182">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -154,9 +171,9 @@
         <option value="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/src/components/HelloWorld.vue" />
         <option value="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/src/App.vue" />
         <option value="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/main.js" />
-        <option value="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/son.vue" />
         <option value="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/state/index.js" />
         <option value="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/father.vue" />
+        <option value="$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/son.vue" />
       </list>
     </option>
   </component>
@@ -167,7 +184,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/CNODE社区网站实战/node_modules" />
+    <handled-path value="$PROJECT_DIR$/CNODE社区网站实战/cnode/node_modules" />
     <handled-path value="$PROJECT_DIR$/vueCli-test/Axios中的get请求/axios-get/node_modules" />
     <handled-path value="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/node_modules" />
     <handled-path value="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/node_modules" />
@@ -178,7 +195,7 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/CNODE社区网站实战/package.json" />
+      <path value="$PROJECT_DIR$/CNODE社区网站实战/cnode/package.json" />
       <path value="$PROJECT_DIR$/vueCli-test/Axios中的get请求/axios-get/package.json" />
       <path value="$PROJECT_DIR$/vueCli-test/Axios中的post请求/axios-post/package.json" />
       <path value="$PROJECT_DIR$/vueCli-test/vuex的store的用法/vuex-store/package.json" />
@@ -189,8 +206,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="91" />
-    <option name="y" value="23" />
+    <option name="x" value="74" />
+    <option name="y" value="46" />
     <option name="width" value="1302" />
     <option name="height" value="800" />
   </component>
@@ -212,43 +229,12 @@
             <path>
               <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
+              <item name="CNODE社区网站实战" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex的相关操作和核心用法" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex的相关操作和核心用法" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex-store-mapulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex的相关操作和核心用法" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex-store-mapulation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex的相关操作和核心用法" type="462c0819:PsiDirectoryNode" />
-              <item name="vuex-store-mapulation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="state" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vue.js 技术栈搭建的CNODE社区" type="462c0819:PsiDirectoryNode" />
-              <item name="vueCli-test" type="462c0819:PsiDirectoryNode" />
-              <item name="通过路由传递参数" type="462c0819:PsiDirectoryNode" />
+              <item name="第九课 render函数" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,7 +317,7 @@
       <workItem from="1537836595612" duration="11311000" />
       <workItem from="1537928503886" duration="3153000" />
       <workItem from="1537942368680" duration="8113000" />
-      <workItem from="1538011040028" duration="12072000" />
+      <workItem from="1538011040028" duration="13103000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1538030332548</created>
@@ -347,24 +333,30 @@
       <option name="project" value="LOCAL" />
       <updated>1538030652563</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="vue-router路由和前端状态管理">
+      <created>1538042778247</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538042778250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105975000" />
+    <option name="totallyTimeSpent" value="107006000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="23" width="1302" height="800" extended-state="0" />
-    <editor active="true" />
+    <frame x="417" y="23" width="1302" height="800" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49920508" visible="true" weight="0.3720565" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920508" visible="true" weight="0.29042387" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50040686" side_tool="true" weight="0.3227345" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.5007949" side_tool="true" weight="0.20504475" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49959317" weight="0.46581876" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49959317" visible="true" weight="0.46581876" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -384,7 +376,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="vue-router路由和前端状态管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue-router路由和前端状态管理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -714,17 +707,10 @@
     <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/outter.vue">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/son.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/state/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state relative-caret-position="262">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -733,8 +719,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/father.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        <state relative-caret-position="416">
+          <caret line="50" column="3" selection-start-line="48" selection-start-column="2" selection-end-line="50" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vueCli-test/vuex的相关操作和核心用法/vuex-store-mapulation/src/components/son.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
